@@ -3,8 +3,8 @@ window.onload = function(){
 	let myBoundary = document.querySelectorAll(".boundary");
 	let end = document.getElementById("end");
 	let win = true;
-	var start = document.getElementById("start");
-	var maze = document.getElementById("maze");
+	let start = document.getElementById("start");
+	let maze = document.getElementById("maze");
 	m.addEventListener("mouseover",lose);
 
 	for (let i = 0; i < myBoundary.length - 1; i++ )
@@ -15,7 +15,7 @@ window.onload = function(){
 					myBoundary[j].setAttribute("class", "boundary youlose");
 					win = false;
 				}
-				alert("You Lose!");
+				document.getElementById("status").innerHTML = "You're a loser!";
 			});
 		}	
 
@@ -23,7 +23,7 @@ window.onload = function(){
 
 			if (win)
 			{
-				alert("You Win!");
+				document.getElementById("status").innerHTML = "You Win! :)";
 			}
 			
 		})
