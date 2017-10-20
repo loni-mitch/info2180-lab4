@@ -39,12 +39,12 @@ window.onload = function(){
 	
 
 		window.addEventListener("mousemove", function(event){
-			var x = event.clientX;
-			var y = event.clientY;
+			let x = event.clientX;
+			let y = event.clientY;
 			console.log(x);
 			if ((x < left) || (x > width + left) || (y < top) || (y > height + top)){
 				console.log('test');
-				for (var i = 0; i < myBoundary.length - 1; i++){
+				for (let i = 0; i < myBoundary.length - 1; i++){
 					myBoundary[i].setAttribute("class", "boundary youlose");
 					win = false;
 					document.getElementById("status").innerHTML = "Don't be a cheater now!";
