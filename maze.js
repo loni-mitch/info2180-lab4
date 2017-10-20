@@ -3,6 +3,8 @@ window.onload = function(){
 	let myBoundary = document.querySelectorAll(".boundary");
 	let end = document.getElementById("end");
 	let win = true;
+	var start = document.getElementById("start");
+	var maze = document.getElementById("maze");
 	m.addEventListener("mouseover",lose);
 
 	for (let i = 0; i < myBoundary.length - 1; i++ )
@@ -25,10 +27,21 @@ window.onload = function(){
 			}
 			
 		})
+	start.addEventListener("click", function(){
+			for (let i = 0; i < myBoundary.length; i++)
+			{
+				myBoundary[i].setAttribute("class", "boundary");
+			}
+			let top = maze.offsetTop;
+			let left = maze.offsetLeft;
+			let height = maze.offsetHeight;
+			let width = maze.offsetWidth;
+	});
+
 };
 
 function lose(){
-	 var d = document.getElementById("boundary1");
+	 let d = document.getElementById("boundary1");
 	 d.classList.add('youlose');
 }
 
